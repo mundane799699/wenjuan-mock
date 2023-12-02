@@ -7,7 +7,6 @@ const Random = Mock.Random;
 
 function getQuestionList(opt = {}) {
   const { len = 10, isDeleted = false, isStar } = opt;
-  console.log(123, isDeleted, isStar);
   const list = [];
   for (let i = 0; i < len; i++) {
     list.push({

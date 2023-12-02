@@ -36,13 +36,14 @@ module.exports = [
     url: "/api/question",
     method: "get",
     response(ctx) {
-      const { query } = ctx;
+      const { query = {} } = ctx;
       const isDeleted = isUndefinedOrNull(query.isDeleted)
         ? query.isDeleted
         : query.isDeleted === "true";
       const isStar = isUndefinedOrNull(query.isStar)
         ? query.isStar
         : query.isStar === "true";
+      const pageSize = parseInt(query.pageSize) || 10;
 
       function isUndefinedOrNull(value) {
         return value === undefined || value === null;
@@ -50,7 +51,7 @@ module.exports = [
       return {
         errno: 0,
         data: {
-          list: getQuestionList({ isDeleted, isStar }),
+          list: getQuestionList({ len: pageSize, isDeleted, isStar }),
           total: 100,
         },
       };
