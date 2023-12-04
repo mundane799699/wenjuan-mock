@@ -16,7 +16,7 @@ function getQuestionList(opt = {}) {
       isStar: isStar ?? Random.boolean(),
       answerCount: Random.natural(50, 100),
       createdAt: Random.datetime(),
-      isDeleted: isDeleted ?? Random.boolean(),
+      isDeleted: isDeleted ?? Random.boolean(), // 假删除
     });
   }
   return list;
