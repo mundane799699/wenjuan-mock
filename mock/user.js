@@ -18,6 +18,8 @@ module.exports = [
           username: token ? Random.title() : "",
           nickname: token ? Random.cname() : "",
         },
+        // errno: 100,
+        // msg: "获取用户信息失败",
       };
     },
   },
