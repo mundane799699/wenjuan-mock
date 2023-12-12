@@ -14,6 +14,9 @@ module.exports = [
         data: {
           id: Random.id(),
           title: Random.ctitle(),
+          desc: Random.cparagraph(),
+          js: Random.cparagraph(),
+          css: Random.cparagraph(),
           componentList: [
             {
               fe_id: Random.id(),
