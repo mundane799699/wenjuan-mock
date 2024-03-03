@@ -71,7 +71,7 @@ function getComponentList() {
       isHidden: false,
       isLocked: false,
       props: {
-        text: "一行段落",
+        text: "一行段落1\n一行段落2",
         isCenter: false,
       },
     },
@@ -114,7 +114,7 @@ function getComponentList() {
           {
             value: "item1",
             text: "选项1",
-            checked: false,
+            checked: true,
           },
           {
             value: "item2",

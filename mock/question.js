@@ -14,9 +14,10 @@ module.exports = [
         data: {
           id: Random.id(),
           title: Random.ctitle(),
-          desc: Random.cparagraph(),
-          js: Random.cparagraph(),
-          css: Random.cparagraph(),
+          desc: "问卷描述",
+          js: "",
+          css: "",
+          isDeleted: false,
           isPublished: true,
           // isPublished: false,
           componentList: getComponentList(),
